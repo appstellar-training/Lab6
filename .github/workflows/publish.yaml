@@ -14,15 +14,15 @@ jobs:
     steps:        
     - uses: actions/checkout@v3
 
-      name: Use Node.js
+    - name: Use Node.js
       uses: actions/setup-node@v3
         with:
           node-version: '17.x'
-      name: Install dependencies
+    - name: Install dependencies
       working-directory: web-app
       - run: npm install
 
-      name: Run Unit Tests
+    - name: Run Unit Tests
       working-directory: web-app
       - run: npm test
    #    - run: npm ci
