@@ -7,13 +7,13 @@ jobs:
   build:   
     runs-on: ubuntu-latest 
     steps:
-      - uses: actions/checkout@v3     
-      - name: Build the Docker image and push to Docker Hub
-        working-directory: web-app
-        
-        env:
-          IMAGE_TAG: ${{ github.sha }}
+    - uses: actions/checkout@v3     
+    - name: Build the Docker image and push to Docker Hub
+      working-directory: web-app
+      
+      env:
+        IMAGE_TAG: ${{ github.sha }}
 
-        run: |
-          doker build . --file Docerfile --tag devops159/web_app_lab6:$IMAGE_TAG
+      run: |
+        doker build . --file Docerfile --tag devops159/web_app_lab6:$IMAGE_TAG
          
