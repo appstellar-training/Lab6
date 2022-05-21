@@ -15,5 +15,5 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
 
       run: |
-        doker build . --file Docerfile --tag devops159/web_app_lab6:$IMAGE_TAG
+        docker build . --file Docerfile --tag devops159/web_app_lab6:$IMAGE_TAG
          
